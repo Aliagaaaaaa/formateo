@@ -51,7 +51,8 @@ echo 1. Opera GX
 echo 2. Google Chrome
 echo 3. Firefox
 echo 4. Brave
-set /p browser_choice=Selecciona una opcion (1/2/3/4): 
+echo 5. No instalar ningun navegador
+set /p browser_choice=Selecciona una opcion (1/2/3/4/5): 
 
 if "%browser_choice%"=="1" (
     set install_browser=1
@@ -68,6 +69,9 @@ if "%browser_choice%"=="3" (
 if "%browser_choice%"=="4" (
     set install_browser=1
     set "install_browser_url=%brave_url%"
+)
+if "%browser_choice%"=="5" (
+    set install_browser=0
 )
 
 set /p spotify_choice=Quieres instalar Spotify? (S/N): 
